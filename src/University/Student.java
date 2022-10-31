@@ -1,4 +1,6 @@
-public class Student extends Person implements Notifiable{
+package University;
+import Notify.Notifiable;
+public class Student extends Person implements Notifiable {
 
     private String  login;
     private String email;
@@ -28,5 +30,10 @@ public class Student extends Person implements Notifiable{
     @Override
     public void notify(String message) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "(Name: " + getName() + ", Login: " + login + ", Email: " + email + ")";
     }
 }

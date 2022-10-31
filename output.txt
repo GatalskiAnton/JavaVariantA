@@ -1,0 +1,2 @@
+course-1
+students: [(Name: jj8, Login: jj8, Email: jj8@bsu.by), (Name: yj34, Login: yj34, Email: yj43@bsu.by), (Name: pr3, Login: pr3, Email: pr3@bsu.by), (Name: gg4, Login: gg4, Email: gg4@bsu.by), (Name: te2, Login: te2, Email: tr2@bsu.by)]

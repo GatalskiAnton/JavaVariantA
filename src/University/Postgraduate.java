@@ -1,3 +1,5 @@
+package University;
+
 public class Postgraduate extends Student{
     Academic supervisor;
 
@@ -9,7 +11,7 @@ public class Postgraduate extends Student{
         this.supervisor = supervisor;
     }
 
-    Postgraduate(String name, String login, String email) {
+    public Postgraduate(String name, String login, String email) {
         super(name, login, email);
     }
 }

@@ -1,6 +1,8 @@
+package University;
+
 public class Undergraduate extends Student {
     Academic tutor;
-    Undergraduate(String name, String login, String email) {
+    public Undergraduate(String name, String login, String email) {
         super(name, login, email);
     }
 
