@@ -1,15 +1,15 @@
+import GUI.Frame;
 import Notify.*;
 import University.*;
 import Writer.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
 
-
-public class ProgrammingMain
-{
+public class ProgrammingMain {
     public static void main(String[] args) {
         Set<Student> students = new HashSet<>();
         Undergraduate gg4 = new Undergraduate("gg4", "gg4", "gg4@bsu.by");
@@ -31,9 +31,9 @@ public class ProgrammingMain
         students.add(jj8);
 
         Course c1 = new Course(students, "course-1");
-        Set<Postgraduate> postgraduates =  c1.getPostgraduates(CayHorstamnn.getName());
+        Set<Postgraduate> postgraduates = c1.getPostgraduates(CayHorstamnn.getName());
 
-        for (Postgraduate postgraduate: postgraduates)
+        for (Postgraduate postgraduate : postgraduates)
             System.out.println(postgraduate.getName() + " " + postgraduate.getLogin() + " " + postgraduate.getEmail());
 
 
@@ -43,6 +43,15 @@ public class ProgrammingMain
 
         System.out.println(studentsByPredicate.toString());
 
-        Writer.toFile(c1, new File("output.txt"), false);
+        try {
+            MyWriter.toFile(c1, new File("output.txt"), false);
+
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+
+        Frame frame = new Frame("Course info",c1);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 }
